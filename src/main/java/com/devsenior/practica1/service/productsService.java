@@ -50,6 +50,7 @@ public class ProductsService {
       public void deleteProductById(Long id) {
     // removeIf recorre la lista y elimina el elemento que cumpla la condición.
     // La condición es: el ID del producto (p.getId()) debe ser igual al ID que recibimos.
+    
     this.producto.removeIf(p -> p.getId().equals(id));
 }
     }

@@ -65,6 +65,8 @@ public class productsController {
         return newProduct;
     }
 
+    // delete para eliminar un producto segun su id 
+    
     @DeleteMapping("/{id}")
     public String deleteProducts(@PathVariable Long id) {
         productsService.deleteProductById(id);
