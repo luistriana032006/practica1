@@ -1,15 +1,15 @@
 package com.devsenior.practica1.model.entity;
 
-public class products {
+public class Products {
     private String name;
     private int cantidad;
     private String descricpcion;
     private double precio;
-
+    private Long id;
 
     /*esencial para que Spring/Jackson pueda crear objetos
      Product a partir del JSON entrante en las peticiones POST */
-    public products() {
+    public Products() {
 
     }
 
@@ -37,17 +37,27 @@ public class products {
         this.descricpcion = descricpcion;
     }
 
-    public products(String name, int cantidad, String descricpcion, double precio) {
+    public Products(String name, int cantidad, String descricpcion, double precio) {
         this.name = name;
         this.cantidad = cantidad;
         this.descricpcion = descricpcion;
         this.precio = precio;
     }
 
+    public Products(String name, int cantidad, String descricpcion, double precio, Long id) {
+        this.name = name;
+        this.cantidad = cantidad;
+        this.descricpcion = descricpcion;
+        this.precio = precio;
+        this.id = id;
+    }
+
+    
+    
     @Override
     public String toString() {
-        return "products [name=" + name + ", cantidad=" + cantidad + ", descricpcion=" + descricpcion + ", precio="
-                + precio + "]";
+        return "Products [name=" + name + ", cantidad=" + cantidad + ", descricpcion=" + descricpcion + ", precio="
+                + precio + ", id=" + id + "]";
     }
 
     public double getPrecio() {
@@ -56,6 +66,15 @@ public class products {
 
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+
+    // Getter y Setter para id
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
 }
